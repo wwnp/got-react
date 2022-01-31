@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+main {
+  background-color: #fff;
+  // height: 100vh;
+}
+
+.bg-got {
+  height: 100vh;
+  background-color: #002431;
+  /* background-image: url("https://www.transparenttextures.com/patterns/fabric-1-light.png"); */
+  background-image: url('../src/assets/images/bg-got.jpg');
+
+}
+
+// header {
+//   height: 50px;
+//   position: fixed;
+// }
+
+// .wrapper {
+//   display: flex;
+//   flex-direction: column;
+
+//   min-height: 100vh;
+
+//   overflow: hidden;
+// }
+
+// footer {
+//   height: 50px;
+//   margin-top: auto;
+// }
+
+
+// .col-2 img {
+//   width: 100%;
+// }
+
+.col-2 {
+  padding: 0;
+}
+
+
+.card-custom {
+  height: 100%;
+  width: 100%;
+  -moz-transition: -moz-background .1s ease-in-out;
+  transition: background .9s ease-in-out;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  h2 {
+    // text-align: center;
+    
+    // background: transparent;
+    position: absolute;
+    bottom: 5px;
+    // left: 50%;
+    // // transform: translateX(-20%);
+    // margin-top: auto;
+    opacity: 0;
+    color: #fff;
+    font-size: 1.1rem;
+    font-family: 'MedievalSharp', cursive;
+    // padding: 5px;
+  }
+
+  // &:hover {
+  //   h2 {
+  //     opacity: 1;
+  //     background: rgba(0, 0, 0, 0.3);
+  //     border-radius: 5%;
+  //   }
+  // }
+}
+
+// .card-custom0 {
+//   background: url('https://i.pinimg.com/736x/8f/a0/51/8fa051251f5ac2d0b756027089fbffde--terry-o-neill-al-pacino.jpg') center center no-repeat;
+//   background-size: 300px;
+
+//   &:hover {
+//     background: url('https://i.pinimg.com/736x/8f/a0/51/8fa051251f5ac2d0b756027089fbffde--terry-o-neill-al-pacino.jpg') left center no-repeat;
+//     background-size: 600px
+//   }
+// }
+
+.card-wrapper {
+  height: 397px;
+  width: 100%;
+  // background: url('../src/assets/images/got.jpg') center center no-repeat;
+  background-size: 300px;
+}
+
+@keyframes mymove {
+  from {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+
+  to {
+    -webkit-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+}
+
+/* The element to apply the animation to */
+.tar-logo {
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: mymove 60s linear infinite;
+  opacity: 0.8;
+  transition: opacity .5s;
+}
+
+@media (min-width: 768px) {
+  .tar-logo {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.tar-logo:hover {
+  opacity: 1;
+}
+.smooth-border {
+  box-shadow: 0 1px 50px  #005f6421;
+}
+
+.container {
+  max-width: 1740px!important;
+}
