@@ -143,8 +143,8 @@ main {
 
 @media (min-width: 768px) {
   .tar-logo {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
   }
 }
 
@@ -155,6 +155,55 @@ main {
   box-shadow: 0 1px 50px  #005f6421;
 }
 
-.container {
-  max-width: 1740px!important;
+.container-got {
+  max-width: 350px;
+  width: 100%;
+  padding-right: var(--bs-gutter-x,.75rem);
+  padding-left: var(--bs-gutter-x,.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+.col-got {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .container-got {
+    max-width: 576px;
+  }
+  .col-got {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .container-got {
+    max-width: 768px;
+  }
+  .col-got {
+    width: 33.33333333%;
+  }
+}
+@media (min-width: 992px) {
+  .container-got {
+    max-width: 1050px;
+  }
+  .col-got {
+    width: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .container-got {
+    max-width: 1145px;
+  }
+  .col-got {
+    width: 25%;
+  }
+}
+@media (min-width: 1650px) {
+  .container-got {
+    max-width: 1740px;
+  }
+  .col-got {
+    width: 16.66666666666666666666666%;
+  }
 }
