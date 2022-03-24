@@ -7,26 +7,37 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --colors-bg: rgba(8, 8, 8, 0.65);
+  --colors-side-active: rgba(0,0,0,0.8);
+  --colors-text: #fff;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-main {
-  background-color: #fff;
-  // height: 100vh;
-}
-
-.bg-got {
-  height: 100vh;
+.wrapper {
+  display:flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
   background-color: #002431;
-  /* background-image: url("https://www.transparenttextures.com/patterns/fabric-1-light.png"); */
   background-image: url('../src/assets/images/bg-got.jpg');
-
 }
-
+footer {
+  margin-top: auto;
+}
+.bg-got {
+  height: 100%;
+  // background-color: #002431;
+  /* background-image: url("https://www.transparenttextures.com/patterns/fabric-1-light.png"); */
+  // background-image: url('../src/assets/images/bg-got.jpg');
+}
+// @media (min-width: 1550px) {
+//   .bg-got {
+//     height: 100vh;
+//   }
+// }
 // header {
 //   height: 50px;
 //   position: fixed;
@@ -60,36 +71,31 @@ main {
   height: 100%;
   width: 100%;
   -moz-transition: -moz-background .1s ease-in-out;
-  transition: background .9s ease-in-out;
+  transition: background .34s ease-in-out;
   overflow: hidden;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  // justify-content: center;
+  // align-items: center;
   position: relative;
   cursor: pointer;
   h2 {
-    // text-align: center;
-    
-    // background: transparent;
-    position: absolute;
-    bottom: 5px;
-    // left: 50%;
-    // // transform: translateX(-20%);
-    // margin-top: auto;
-    opacity: 0;
+    text-align: center;
+    margin-top: auto;
     color: #fff;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-family: 'MedievalSharp', cursive;
-    // padding: 5px;
+    padding: 2px;
+    transition: 'background .7s ease-in-out, opacity .7s ease-in-out';
+    opacity: 0;
+    border-radius: '5%';
   }
 
-  // &:hover {
-  //   h2 {
-  //     opacity: 1;
-  //     background: rgba(0, 0, 0, 0.3);
-  //     border-radius: 5%;
-  //   }
-  // }
+  &:hover {
+    h2 {
+      opacity: 1;
+      background: rgba(0, 0, 0, 0.3);
+    }
+  }
 }
 
 // .card-custom0 {
@@ -103,7 +109,7 @@ main {
 // }
 
 .card-wrapper {
-  height: 397px;
+  height: 386px;
   width: 100%;
   // background: url('../src/assets/images/got.jpg') center center no-repeat;
   background-size: 300px;
@@ -127,8 +133,8 @@ main {
 .tar-logo {
   cursor: pointer;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 10px;
+  right: 10px;
   z-index: 1000;
   width: 100px;
   height: 100px;
@@ -143,8 +149,8 @@ main {
 
 @media (min-width: 768px) {
   .tar-logo {
-    width: 180px;
-    height: 180px;
+    width: 120px;
+    height: 120px;
   }
 }
 
