@@ -41,7 +41,61 @@ export const Home = (props: any) => {
       name: 'Daenerys Targaryen',
       close: closeDaynerys,
       open: false,
-      id: 3
+      id: 0
+    },
+    {
+      name: 'John Snow',
+      close: closeSnow,
+      open: openSnow,
+      id: 1
+    },
+    {
+      name: 'Rob Stark',
+      close: gotRob,
+      open: false,
+      id: 2
+    },
+    {
+      name: 'Daenerys Targaryen',
+      close: closeDaynerys,
+      open: false,
+      id: 0
+    },
+    {
+      name: 'John Snow',
+      close: closeSnow,
+      open: openSnow,
+      id: 1
+    },
+    {
+      name: 'Rob Stark',
+      close: gotRob,
+      open: false,
+      id: 2
+    },
+    {
+      name: 'Daenerys Targaryen',
+      close: closeDaynerys,
+      open: false,
+      id: 0
+    },
+    {
+      name: 'John Snow',
+      close: closeSnow,
+      open: openSnow,
+      id: 1
+    },
+    {
+      name: 'Rob Stark',
+      close: gotRob,
+      open: false,
+      id: 2
+    },
+    {
+      name: 'Daenerys Targaryen',
+      close: closeDaynerys,
+      open: false,
+      id: 0
     },
 
   ]

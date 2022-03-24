@@ -12,7 +12,7 @@ import {
 import { Home } from './containers/Home';
 import { store } from './store'
 import { Provider } from 'react-redux'
-import { Search } from 'containers/Search';
+import { SearchPage } from 'containers/SearchPage';
 import { About } from 'containers/About';
 import { Single } from 'containers/Single';
 
@@ -22,7 +22,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
-          <Route path='search' element={<Search />} />
+          <Route path='search' element={<SearchPage />} />
           <Route path='about' element={<About />} />
           <Route path='character/:id' element={<Single />} />
         </Route>

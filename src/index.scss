@@ -7,9 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --colors-bg: rgba(8, 8, 8, 0.65);
-  --colors-side-active: rgba(0,0,0,0.8);
+  --colors-bg: rgba(8, 8, 8, 0.85);
+  --colors-side-active: rgba(0,0,0,1);
   --colors-text: #fff;
+  color: var(--colors-text);
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -20,6 +21,7 @@ code {
   display:flex;
   flex-direction: column;
   min-height: 100vh;
+  height: 100vh;
   overflow: hidden;
   background-color: #002431;
   background-image: url('../src/assets/images/bg-got.jpg');
@@ -212,4 +214,22 @@ footer {
   .col-got {
     width: 16.66666666666666666666666%;
   }
+}
+
+.got__block {
+  margin: 0 auto;
+  // min-height: 80vh;
+  background: var(--colors-bg);
+  max-width: 100vw;
+  padding: 1rem;
+}
+@media screen and (min-width: 576px) {
+  .got__block {
+    max-width: 50vw;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
