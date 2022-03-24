@@ -14,6 +14,7 @@ import { store } from './store'
 import { Provider } from 'react-redux'
 import { Search } from 'containers/Search';
 import { About } from 'containers/About';
+import { Single } from 'containers/Single';
 
 ReactDOM.render(
   <Provider store={store}>
@@ -23,6 +24,7 @@ ReactDOM.render(
           <Route index element={<Home />} />
           <Route path='search' element={<Search />} />
           <Route path='about' element={<About />} />
+          <Route path='character/:id' element={<Single />} />
         </Route>
       </Routes>
     </BrowserRouter>
