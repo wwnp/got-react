@@ -11,8 +11,9 @@ interface IState {
   loading: boolean,
   singleMore: any,
   search: string,
-  posts: any[] 
-  filteredPosts: any[] 
+  posts: any[]
+  filteredPosts: any[],
+  page: number,
 }
 
 const initialState: IState = {
@@ -23,7 +24,8 @@ const initialState: IState = {
   loading: true,
   search: '',
   posts: [],
-  filteredPosts: []
+  filteredPosts: [],
+  page: 1
 }
 
 const gotSlice = createSlice({
@@ -50,8 +52,11 @@ const gotSlice = createSlice({
     },
     setFilteredPosts(state, { payload }) {
       state.filteredPosts = payload
+    },
+    changePage(state, { payload }) {
+      state.page = payload
     }
   }
 })
-export const { changeDrawer, setSingle, setLoading, setSingleMore, setSearch,setPosts,setFilteredPosts } = gotSlice.actions // go to needed files
-export default gotSlice.reducer // go to index.ts
+export const { changeDrawer, setSingle, setLoading, setSingleMore, setSearch, setPosts, setFilteredPosts, changePage } = gotSlice.actions
+export default gotSlice.reducer 

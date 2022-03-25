@@ -11,6 +11,8 @@ body {
   --colors-side-active: rgba(0,0,0,1);
   --colors-text: #fff;
   color: var(--colors-text);
+  background-color: #002431;
+  background-image: url('../src/assets/images/bg-got.jpg');
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -22,9 +24,7 @@ code {
   flex-direction: column;
   min-height: 100vh;
   height: 100vh;
-  overflow: hidden;
-  background-color: #002431;
-  background-image: url('../src/assets/images/bg-got.jpg');
+
 }
 footer {
   margin-top: auto;
