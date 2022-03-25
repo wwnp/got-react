@@ -4,22 +4,23 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from 'store';
 import { setSearch } from 'store/gotSlice';
 
-export const Search = ({ handleSearch, setSearch, search }: any) => {
-  // const dispatch = useDispatch()
-  // const search = useSelector((state: RootState) => state.got.search)
-  const handleSubmit = () => {
-    handleSearch(search)
-  }
+export const Search = ({ handleSearch, setSearch, search ,setPage}: any) => {
+  // const handleSubmit = () => {
+  //   handleSearch(search)
+  // }
   return (
     <div className='input-field col s12'>
       <InputGroup className="mb-3" style={{ width: '70%', margin: '0 auto' }}>
         <FormControl
           placeholder="Search"
           defaultValue={search}
-          onChange={(e) => setSearch(e.target.value.trim().toLowerCase())} /
+          onChange={(e) => {
+            setPage(1)
+            setSearch(e.target.value.trim().toLowerCase())
+          }} /
         // onChange={(e) => dispatch(setSearch(e.target.value.trim()))} /
         >
-        <Button variant="success" onClick={handleSubmit}>🔍</Button>
+        {/* <Button variant="dark" onClick={handleSubmit}>🔍</Button> */}
       </InputGroup>
     </div>
   )

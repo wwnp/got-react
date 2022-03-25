@@ -1,8 +1,9 @@
 import { PER_PAGE } from 'auxiliary'
 import React from 'react'
+import { Row } from 'react-bootstrap'
 import Pagination from 'react-bootstrap/Pagination'
 
-export const PaginationComp = ({  setPage, page ,postsLength}: any) => {
+export const PaginationComp = ({ setPage, page, postsLength }: any) => {
   let pagesNum = Math.ceil(postsLength / PER_PAGE)
   let temp = []
   for (let number = 1; number <= pagesNum; number++) {
@@ -18,8 +19,8 @@ export const PaginationComp = ({  setPage, page ,postsLength}: any) => {
     );
   }
   return (
-    <>
-      <Pagination>{temp}</Pagination>
-    </>
+    <Row >
+      <Pagination className='justify-content-center' size='lg'>{temp}</Pagination>
+    </Row>
   )
 }

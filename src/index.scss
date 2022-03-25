@@ -233,3 +233,8 @@ img {
   width: 100%;
   height: auto;
 }
+
+.page-item.active .page-link{
+  background: #212529;
+  border: 1px solid #212529;
+}
