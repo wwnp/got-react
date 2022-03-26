@@ -1,30 +1,54 @@
+// font-family: 'MedievalSharp', cursive;
+// font-family: 'UnifrakturCook', cursive;
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "MedievalSharp", cursive;
   --colors-bg: rgba(8, 8, 8, 0.85);
-  --colors-side-active: rgba(0,0,0,1);
+  --colors-side-active: rgba(0, 0, 0, 1);
   --colors-text: #fff;
+  --text-hover-shadow: 1px 2px 7px rgb(93, 187, 194);
+  --box-hover-shadow: 1px 1px 2px 3px rgb(151, 151, 151);
   color: var(--colors-text);
-  background-color: #002431;
-  background-image: url('../src/assets/images/bg-got.jpg');
+
+  background-color: #012b38;
+  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
 }
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.UnifrakturCook-family {
+  font-family: "UnifrakturCook", cursive;
+}
+
+.fz-15 {
+  font-size: 1.5rem;
+}
+
+.find__charcard {
+  transition: text-shadow 0.1s ease , box-shadow .5s ease;
+}
+
+.text-hover-shadow:hover {
+  text-shadow: var(--text-hover-shadow);
+}
+
+.box-shadow-hover:hover {
+  box-shadow: var(--box-hover-shadow);
 }
 
 .wrapper {
-  display:flex;
+  display: flex;
   flex-direction: column;
   min-height: 100vh;
   height: 100vh;
-
 }
 footer {
   margin-top: auto;
@@ -59,7 +83,6 @@ footer {
 //   margin-top: auto;
 // }
 
-
 // .col-2 img {
 //   width: 100%;
 // }
@@ -68,12 +91,11 @@ footer {
   padding: 0;
 }
 
-
 .card-custom {
   height: 100%;
   width: 100%;
-  -moz-transition: -moz-background .1s ease-in-out;
-  transition: background .34s ease-in-out;
+  -moz-transition: -moz-background 0.1s ease-in-out;
+  transition: background 0.34s ease-in-out;
   overflow: hidden;
   display: flex;
   // justify-content: center;
@@ -85,11 +107,11 @@ footer {
     margin-top: auto;
     color: #fff;
     font-size: 1rem;
-    font-family: 'MedievalSharp', cursive;
+    font-family: "MedievalSharp", cursive;
     padding: 2px;
-    transition: 'background .7s ease-in-out, opacity .7s ease-in-out';
+    transition: "background .7s ease-in-out, opacity .7s ease-in-out";
     opacity: 0;
-    border-radius: '5%';
+    border-radius: "5%";
   }
 
   &:hover {
@@ -146,7 +168,7 @@ footer {
   -o-animation: rotating 2s linear infinite;
   animation: mymove 60s linear infinite;
   opacity: 0.8;
-  transition: opacity .5s;
+  transition: opacity 0.5s;
 }
 
 @media (min-width: 768px) {
@@ -160,14 +182,17 @@ footer {
   opacity: 1;
 }
 .smooth-border {
-  box-shadow: 0 1px 50px  #005f6421;
+  // box-shadow: inset 0 0 25px rgba(101, 114, 126, 50), inset 0 0 25px rgba(140, 150, 170, 50), inset 0 0 25px rgb(83, 94, 104), inset 0 0 25px rgb(86, 96, 106);
+  // box-shadow: #002130 0 0 300px 50px, #002130 0 0 15px, inset #002130 0 0 100px;
+  // border-radius: 30px;
+  // box-shadow: 0 1px 50px  #005f6421;
 }
 
 .container-got {
   max-width: 350px;
   width: 100%;
-  padding-right: var(--bs-gutter-x,.75rem);
-  padding-left: var(--bs-gutter-x,.75rem);
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
   margin-left: auto;
 }
@@ -215,13 +240,16 @@ footer {
     width: 16.66666666666666666666666%;
   }
 }
-
+.blured-edge {
+  // box-shadow: inset 0 0 25px rgba(101, 114, 126, 50), inset 0 0 25px rgba(140, 150, 170, 50), inset 0 0 25px rgb(83, 94, 104), inset 0 0 25px rgb(86, 96, 106);
+}
 .got__block {
   margin: 0 auto;
   // min-height: 80vh;
   background: var(--colors-bg);
   max-width: 100vw;
   padding: 1rem;
+  border-radius: 5px;
 }
 @media screen and (min-width: 576px) {
   .got__block {
@@ -234,7 +262,11 @@ img {
   height: auto;
 }
 
-.page-item.active .page-link{
+.page-item.active .page-link {
   background: #212529;
   border: 1px solid #212529;
+}
+
+.fz-07 {
+  font-size: 0.7em;
 }

@@ -102,7 +102,8 @@ export const Home = (props: any) => {
   // onClick={() => dispatch(changeDrawer())}
   return (
     <main>
-      <div className={'container-got smooth-border '}>
+      <div className={'container-got smooth-border'}>
+        <h2 className='display-2 text-center text-dark'>Hall of Faces</h2>
         <HomeList itemsS={itemsS}></HomeList>
       </div>
     </main>

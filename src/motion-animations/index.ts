@@ -65,7 +65,6 @@ export const variants_X_M100_to_0 = {
     },
   }
 }
-
 export const variantsOpacity = {
   hidden: {
     opacity: 0,
@@ -85,4 +84,18 @@ export const variantsOpacity = {
       duration: duration1
     }
   }
+}
+export const listVariants = {
+  hidden: {
+    opacity: 0,
+    y: 500
+  },
+  visible: (i: any) => ({
+    opacity: 1,
+    transition: {
+      duration: .3,
+      delay: i * 0.1
+    },
+    y: 0
+  }),
 }

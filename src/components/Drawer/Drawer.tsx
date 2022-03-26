@@ -51,10 +51,10 @@ export const Drawer = () => {
               </li>
               <li>
                 <NavLink
-                  to='/search'
+                  to='/find'
                   className={({ isActive }) => (isActive ? 'side-a active-side' : 'side-a')}
                   onClick={() => dispatch(changeDrawer(false))}
-                >Search
+                >Find
                 </NavLink>
               </li>
             </ul>

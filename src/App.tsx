@@ -11,7 +11,6 @@ function App() {
       <img src={tar} className={'tar-logo'} alt='tar' onClick={() => dispatch(changeDrawer(true))} />
       <Drawer />
       <Outlet></Outlet>
-      <footer>Footer</footer>
     </div >
   );
 }
