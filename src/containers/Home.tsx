@@ -103,7 +103,7 @@ export const Home = (props: any) => {
   return (
     <main>
       <div className={'container-got smooth-border'}>
-        <h2 className='display-2 text-center text-dark'>Hall of Faces</h2>
+        <h2 className='display-2 text-center text-dark got-title'>Hall of Faces</h2>
         <HomeList itemsS={itemsS}></HomeList>
       </div>
     </main>

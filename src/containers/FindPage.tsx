@@ -67,13 +67,13 @@ export const FindPage = () => {
         loading
           ? <Loader></Loader>
           : (
-            <Row className='justify-content-between flex-column h-100'>
-              <Col xs={12} >
-                <h2 className='text-center display-2'>Find character</h2>
+            <Row className='justify-content-between h-100'>
+              <Col xs={12} className='overflow-hidden'>
+                <h2 className='text-center display-2 got-title '>Find character</h2>
                 <Search handleSearch={handleSearch} setSearch={setSearch} search={search} setPage={setPage}></Search>
                 <SearchList posts={outPosts}></SearchList>
               </Col>
-              <Col xs={12} >
+              <Col xs={12} className='pt-2'>
                 <PaginationComp
                   setPage={setPage}
                   page={page}

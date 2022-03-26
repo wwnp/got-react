@@ -40,12 +40,12 @@ export const Single = () => {
         ? <Loader></Loader>
         : (
           <Row className="justify-content-center mt-2 mt-md-5">
-            <div className="got__block rounded">
+            <div className="single__gotBlock rounded">
               <Row className='mt-3'>
-                <Col sm={12} md={4}>
+                <Col sm={12} md={5}>
                   <Image src={singleItem.imageUrl} alt={singleItem.image} rounded={true}></Image>
                 </Col>
-                <Col sm={12} md={8}>
+                <Col sm={12} md={7}>
                   <h3 className='display-3 text-center'>{singleItem.fullName}</h3>
                   {!!singleItem.gender && <p>Gender: {singleMore.gender}</p>}
                   {!!singleItem.title && <p>Title: {singleItem.title}</p>}
