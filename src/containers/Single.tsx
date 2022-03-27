@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect } from 'react'
-import { useParams } from 'react-router-dom';
-import { Container, Row, Col, Badge } from 'react-bootstrap';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
+import { Container, Row, Col, Badge, Button } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { setSingle, setLoading, setSingleMore, setSearch } from 'store/gotSlice';
 import { RootState } from 'store';
@@ -11,10 +11,10 @@ import { delay } from 'auxiliary';
 
 export const Single = () => {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   const loading = useSelector((state: RootState) => state.got.loading)
   const singleItem = useSelector((state: RootState) => state.got.singleItem)
-  const singleMore = useSelector((state: RootState) => state.got.singleMore)
 
   const { id } = useParams();
 
@@ -25,8 +25,8 @@ export const Single = () => {
 
       const response2 = await axios.get(`https://www.anapioficeandfire.com/api/characters?name=${data.fullName}`)
       const { data: data2 } = response2
-      console.log({...data, ...data2[0]})
-      dispatch(setSingle({...data, ...data2[0]}))
+      console.log({ ...data, ...data2[0] })
+      dispatch(setSingle({ ...data, ...data2[0] }))
       dispatch(setLoading(false))
     }
     dispatch(setLoading(true))
@@ -54,7 +54,7 @@ export const Single = () => {
                   {!!singleItem.mother && <p>Mother: {singleItem.mother}</p>}
                   {!!singleItem.father && <p>Father: {singleItem.father}</p>}
                   {!!singleItem.culture && <p>Culture: {singleItem.culture}</p>}
-                  {/* {singleItem.playedBy[0].length > 1 && <p>PlayedBy: {singleMore.playedBy[0]}</p>} */}
+                  {!!singleItem.playedBy && singleItem.playedBy[0].length > 1 && <p>PlayedBy: {singleItem.playedBy[0]}</p>}
                   {/* {!!singleMore.aliases && (
                       <div>
                         {
@@ -65,6 +65,10 @@ export const Single = () => {
                       </div>
                     )} */}
                 </Col>
+                
+              </Row>
+              <Row>
+                <Button onClick={() => navigate(-1)}></Button>
               </Row>
             </div>
           </Row>
