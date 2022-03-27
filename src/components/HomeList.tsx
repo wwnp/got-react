@@ -14,7 +14,7 @@ export const HomeList = ({ itemsS }: any) => {
           let backPos = null
           let left = null
           backPos = '45%'
-          left = '37.5%'
+          left = '36.5%'
           styles = {
             CardCustom: style({
               width: '100%',

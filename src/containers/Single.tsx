@@ -8,6 +8,7 @@ import { RootState } from 'store';
 import Image from 'react-bootstrap/Image'
 import Loader from 'components/Loader/Loader';
 import { delay } from 'auxiliary';
+import { MButton } from 'components/MButton';
 
 export const Single = () => {
   const dispatch = useDispatch()
@@ -35,7 +36,7 @@ export const Single = () => {
 
   return (
     <Container className='h-100'>
-      {!Object.keys(singleItem).length
+      {loading
         ? <Loader></Loader>
         : (
           <Row className="justify-content-center mt-2 mt-md-5">
@@ -51,8 +52,8 @@ export const Single = () => {
                   {!!singleItem.family && <p>Family: {singleItem.family}</p>}
                   {!!singleItem.born && <p>Born: {singleItem.born}</p>}
                   {!!singleItem.died && <p>Died: {singleItem.died}</p>}
-                  {!!singleItem.mother && <p>Mother: {singleItem.mother}</p>}
-                  {!!singleItem.father && <p>Father: {singleItem.father}</p>}
+                  {/* {!!singleItem.mother && <p>Mother: {singleItem.mother}</p>} */}
+                  {/* {!!singleItem.father && <p>Father: {singleItem.father}</p>} */}
                   {!!singleItem.culture && <p>Culture: {singleItem.culture}</p>}
                   {!!singleItem.playedBy && singleItem.playedBy[0].length > 1 && <p>PlayedBy: {singleItem.playedBy[0]}</p>}
                   {/* {!!singleMore.aliases && (
@@ -65,10 +66,24 @@ export const Single = () => {
                       </div>
                     )} */}
                 </Col>
-                
+
               </Row>
-              <Row>
-                <Button onClick={() => navigate(-1)}></Button>
+              <Row className='justify-content-center'>
+                <Col xs={1}>
+                  <MButton
+                    initial={{
+                      x: -100
+                    }}
+                    animate={{
+                      x: 0
+                    }}
+                    variant={'warning'} 
+                    onClick={() => navigate(-1)}
+                  >
+                    Back
+                  </MButton>
+                  {/* <Button variant={'warning'} onClick={() => navigate(-1)}>Back</Button> */}
+                </Col>
               </Row>
             </div>
           </Row>

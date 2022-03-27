@@ -1,14 +1,4 @@
 import React from 'react'
-import bgGot from '../assets/images/bg-got.jpg'
-import closeSnow from '../assets/images/gotSnow.jpg'
-import openSnow from '../assets/images/openSnow1.png'
-// import openSnow4 from '../assets/images/openSnow4.png'
-// import openSnow3 from '../assets/images/openSnow3.png'
-import closeDaynerys from '../assets/images/closeDaynerys.jpg'
-import gotRob from '../assets/images/gotRob.jpg'
-import got from '../assets/images/got.jpg'
-
-
 import { Container, Row, Col } from 'react-bootstrap';
 import { css, style } from 'glamor'
 import styled from 'styled-components'
@@ -18,88 +8,94 @@ import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from 'store';
 import { useNavigate } from 'react-router-dom'
 import { HomeList } from 'components/HomeList'
+import snowClose from '../assets/images/snowClose.png'
+import daeClose from '../assets/images/daeClose.png'
+import robClose from '../assets/images/robClose.png'
+import sansaClose from '../assets/images/sansaClose.png'
+import oberinClose from '../assets/images/oberinClose.png'
+import cerseaClose from '../assets/images/cerseaClose.png'
+import jofryClose from '../assets/images/jofryClose.png'
+import jaimeClose from '../assets/images/jaimeClose.png'
+import tirionClose from '../assets/images/tirionClose.png'
+import nedClose from '../assets/images/nedClose.png'
+import aryaClose from '../assets/images/aryaClose.png'
+import katClose from '../assets/images/katClose.png'
 
 export const Home = (props: any) => {
-  const navigate = useNavigate()
-  const dispatch = useDispatch()
-  const drawer = useSelector((state: RootState) => state.got.drawer)
-  const items = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 4]
   const itemsS = [
     {
       name: 'John Snow',
-      close: closeSnow,
-      open: openSnow,
+      close: snowClose,
+      open: false,
       id: 1
     },
     {
-      name: 'Rob Stark',
-      close: gotRob,
+      name: 'Daenerys Targaryen',
+      close: daeClose,
       open: false,
       id: 2
     },
     {
-      name: 'Daenerys Targaryen',
-      close: closeDaynerys,
+      name: 'Rob Stark',
+      close: robClose,
       open: false,
       id: 0
     },
     {
-      name: 'John Snow',
-      close: closeSnow,
-      open: openSnow,
+      name: 'Sansa Stark',
+      close: sansaClose,
+      open: false,
       id: 1
     },
     {
-      name: 'Rob Stark',
-      close: gotRob,
+      name: 'Oberin Martell',
+      close: oberinClose,
       open: false,
       id: 2
     },
     {
-      name: 'Daenerys Targaryen',
-      close: closeDaynerys,
+      name: 'Sersea Lannister',
+      close: cerseaClose,
       open: false,
       id: 0
     },
     {
-      name: 'John Snow',
-      close: closeSnow,
-      open: openSnow,
+      name: 'Joffry Baratheon',
+      close: jofryClose,
+      open: false,
       id: 1
     },
     {
-      name: 'Rob Stark',
-      close: gotRob,
+      name: 'Jaime Lannister',
+      close: jaimeClose,
       open: false,
       id: 2
     },
     {
-      name: 'Daenerys Targaryen',
-      close: closeDaynerys,
+      name: 'Tyrion Lannister',
+      close: tirionClose,
       open: false,
       id: 0
     },
     {
-      name: 'John Snow',
-      close: closeSnow,
-      open: openSnow,
+      name: 'Ned Stark',
+      close: nedClose,
+      open: false,
       id: 1
     },
     {
-      name: 'Rob Stark',
-      close: gotRob,
+      name: 'Arya Stark',
+      close: aryaClose,
       open: false,
       id: 2
     },
     {
-      name: 'Daenerys Targaryen',
-      close: closeDaynerys,
+      name: 'Katelyn Stark',
+      close: katClose,
       open: false,
       id: 0
     },
-
   ]
-  // onClick={() => dispatch(changeDrawer())}
   return (
     <main>
       <div className={'container-got smooth-border'}>
