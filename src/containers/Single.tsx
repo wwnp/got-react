@@ -27,7 +27,6 @@ export const Single = () => {
       const { data: data2 } = response2
       console.log({...data, ...data2[0]})
       dispatch(setSingle({...data, ...data2[0]}))
-
       dispatch(setLoading(false))
     }
     dispatch(setLoading(true))
@@ -40,21 +39,21 @@ export const Single = () => {
         ? <Loader></Loader>
         : (
           <Row className="justify-content-center mt-2 mt-md-5">
-            <div className="single__gotBlock rounded">
+            <div className="got__block rounded">
               <Row className='mt-3'>
                 <Col sm={12} md={5}>
                   <Image src={singleItem.imageUrl} alt={singleItem.image} rounded={true}></Image>
                 </Col>
                 <Col sm={12} md={7}>
                   <h3 className='display-3 text-center'>{singleItem.fullName}</h3>
-                  {!!singleItem.gender && <p>Gender: {singleMore.gender}</p>}
+                  {!!singleItem.gender && <p>Gender: {singleItem.gender}</p>}
                   {!!singleItem.title && <p>Title: {singleItem.title}</p>}
                   {!!singleItem.family && <p>Family: {singleItem.family}</p>}
-                  {!!singleItem.born && <p>Born: {singleMore.born}</p>}
-                  {!!singleItem.died && <p>Died: {singleMore.died}</p>}
-                  {!!singleItem.mother && <p>Mother: {singleMore.mother}</p>}
-                  {!!singleItem.father && <p>Father: {singleMore.father}</p>}
-                  {!!singleItem.culture && <p>Culture: {singleMore.culture}</p>}
+                  {!!singleItem.born && <p>Born: {singleItem.born}</p>}
+                  {!!singleItem.died && <p>Died: {singleItem.died}</p>}
+                  {!!singleItem.mother && <p>Mother: {singleItem.mother}</p>}
+                  {!!singleItem.father && <p>Father: {singleItem.father}</p>}
+                  {!!singleItem.culture && <p>Culture: {singleItem.culture}</p>}
                   {/* {singleItem.playedBy[0].length > 1 && <p>PlayedBy: {singleMore.playedBy[0]}</p>} */}
                   {/* {!!singleMore.aliases && (
                       <div>
