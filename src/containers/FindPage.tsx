@@ -24,7 +24,7 @@ export const FindPage = () => {
   const loading = useSelector((state: RootState) => state.got.loading)
 
   const [page, setPage] = useState(+parsed.page || 1);
-  const [search, setSearch] = useState(parsed.search || '');
+  const [search, setSearch] = useState(parsed.find || '');
 
   const handleSearch = (str: string) => {
     setPage(1)

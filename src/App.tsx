@@ -7,11 +7,13 @@ import tar from './assets/images/tar.png'
 function App() {
   const dispatch = useDispatch()
   return (
-    <div className="wrapper">
+    <>
+      {/* <div className="wrapper"> */}
       <img src={tar} className={'tar-logo'} alt='tar' onClick={() => dispatch(changeDrawer(true))} />
       <Drawer />
       <Outlet></Outlet>
-    </div >
+      {/* </div > */}
+    </>
   );
 }
 
