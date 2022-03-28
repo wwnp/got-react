@@ -61,6 +61,7 @@ export const FindPage = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page, posts, search])
+  
   return (
     <Container className='h-100'>
       {
