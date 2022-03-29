@@ -6,14 +6,6 @@
 - React
 - Typescript
 - SCSS
-<details>
-  <summary>dev</summary>
-  <p>
-    HomePage
-    cut alive faces open eyes
-    make id and ___Open to home database
-  </p>
-</details>
 
 
 
