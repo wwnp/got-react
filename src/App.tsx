@@ -8,13 +8,10 @@ function App() {
   const dispatch = useDispatch()
   return (
     <>
-      {/* <div className="wrapper"> */}
       <img src={tar} className={'tar-logo'} alt='tar' onClick={() => dispatch(changeDrawer(true))} />
       <Drawer />
       <Outlet></Outlet>
-      {/* </div > */}
     </>
   );
 }
-
 export default App;

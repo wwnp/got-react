@@ -19,7 +19,7 @@ import { Single } from 'containers/Single';
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter basename="/got-react">
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />

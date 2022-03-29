@@ -1,5 +1,6 @@
 {
   "name": "got-react",
+  "homepage": "https://wwnp.github.io/got-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -30,7 +31,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -54,7 +57,8 @@
     "@types/react": "^17.0.42",
     "@types/react-dom": "^17.0.14",
     "@types/styled-components": "^5.1.24",
-    "ajv": "^6.12.6"
+    "ajv": "^6.12.6",
+    "gh-pages": "^3.2.3"
   },
   "resolutions": {
     "styled-components": "^5"

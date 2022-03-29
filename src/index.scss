@@ -29,6 +29,13 @@ body::after {
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
   z-index: 2;
+
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1; // hide images
+  content: url('./assets/images/aryaOpen.png') url('./assets/images/sansaOpen.png') url('./assets/images/tyrionOpen.png') url('./assets/images/snowOpen.png'); // load images
 }
 
 code {

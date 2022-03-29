@@ -11,3 +11,20 @@ export const delay = (ms) => {
   })
 }
 export const email = 'serhio.gilev@gmail.com'
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const images = [];
+
+//   function preloadImages(...images) {
+//     images.forEach((image, i) => {
+//       image = new Image();
+//       image.src = preloadImages.arguments[i];
+//     });
+//   };
+
+//   // Предварительная загрузка нужных картинок
+//   preloadImages(
+//     '{Изображение}.png',
+//     '{Другое изображение}.jpg'
+//   );
+// });

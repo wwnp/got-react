@@ -99,3 +99,15 @@ export const listVariants = {
     y: 0
   }),
 }
+export const listVariants2 = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: (i: any) => ({
+    opacity: 1,
+    transition: {
+      duration: .6,
+      delay: i * 0.1
+    },
+  }),
+}

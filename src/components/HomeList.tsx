@@ -3,6 +3,8 @@ import React from 'react'
 import { Row } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import gotLast from '../assets/images/gotLast.jpg'
+import { motion } from 'framer-motion'
+import { listVariants2 } from 'motion-animations'
 
 export const HomeList = ({ itemsS }: any) => {
   const navigate = useNavigate()
@@ -27,7 +29,7 @@ export const HomeList = ({ itemsS }: any) => {
               backgroundPosition: `right ${backPos} bottom 52.5% `,
               backgroundSize: '135px',
               ":hover": {
-                background: `url(${item.open !== false ? item.open : item.close})  no-repeat`,
+                background: `url(${item.open ? item.open : item.close}) no-repeat`,
                 backgroundSize: '135px',
                 backgroundPosition: `right ${backPos} bottom 52.5%`,
               },
@@ -55,9 +57,17 @@ export const HomeList = ({ itemsS }: any) => {
                 background: `url(${gotLast}) center center no-repeat`,
                 backgroundSize: '290px',
               }}>
-                <div className="card-custom"  {...styles.CardCustom}>
+                <motion.div
+                  className="card-custom"
+                  {...styles.CardCustom}
+                  variants={listVariants2}
+                  initial="hidden"
+                  animate="visible"
+                  custom={index}
+                  transition={{ delay: .75 }}
+                >
                   <h2>{item.name}</h2>
-                </div>
+                </motion.div>
               </div>
             </div>
           )

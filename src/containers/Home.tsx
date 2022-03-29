@@ -1,12 +1,4 @@
-import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap';
-import { css, style } from 'glamor'
-import styled from 'styled-components'
-import { AnimatePresence, motion } from "framer-motion";
-import { changeDrawer } from 'store/gotSlice';
-import { useDispatch, useSelector } from 'react-redux'
-import { RootState } from 'store';
-import { useNavigate } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
 import { HomeList } from 'components/HomeList'
 import snowClose from '../assets/images/snowClose.png'
 import snowOpen from '../assets/images/snowOpen.png'
@@ -25,81 +17,83 @@ import aryaClose from '../assets/images/aryaClose.png'
 import aryaOpen from '../assets/images/aryaOpen.png'
 import katClose from '../assets/images/katClose.png'
 
+const itemsS = [
+  {
+    name: 'John Snow',
+    close: snowClose,
+    open: snowOpen,
+    id: 2
+  },
+  {
+    name: 'Daenerys Targaryen',
+    close: daeClose,
+    open: false,
+    id: 0
+  },
+  {
+    name: 'Rob Stark',
+    close: robClose,
+    open: false,
+    id: 11
+  },
+  {
+    name: 'Sansa Stark',
+    close: sansaClose,
+    open: sansaOpen,
+    id: 4
+  },
+  {
+    name: 'Oberyn Martell',
+    close: oberinClose,
+    open: false,
+    id: 39
+  },
+  {
+    name: 'Cersei Lannister',
+    close: cerseaClose,
+    open: false,
+    id: 9
+  },
+  {
+    name: 'Joffrey Baratheon',
+    close: jofryClose,
+    open: false,
+    id: 13
+  },
+  {
+    name: 'Jamie Lannister',
+    close: jaimeClose,
+    open: false,
+    id: 8
+  },
+  {
+    name: 'Tyrion Lannister',
+    close: tyrionClose,
+    open: tyrionOpen,
+    id: 14
+  },
+  {
+    name: 'Ned Stark',
+    close: nedClose,
+    open: false,
+    id: 6
+  },
+  {
+    name: 'Arya Stark',
+    close: aryaClose,
+    open: aryaOpen,
+    id: 3
+  },
+  {
+    name: 'Catelyn  Stark',
+    close: katClose,
+    open: false,
+    id: 10
+  },
+]
 export const Home = (props: any) => {
-  const itemsS = [
-    {
-      name: 'John Snow',
-      close: snowClose,
-      open: snowOpen,
-      id: 2
-    },
-    {
-      name: 'Daenerys Targaryen',
-      close: daeClose,
-      open: false,
-      id: 0
-    },
-    {
-      name: 'Rob Stark',
-      close: robClose,
-      open: false,
-      id: 11
-    },
-    {
-      name: 'Sansa Stark',
-      close: sansaClose,
-      open: sansaOpen,
-      id: 4
-    },
-    {
-      name: 'Oberyn Martell',
-      close: oberinClose,
-      open: false,
-      id: 39
-    },
-    {
-      name: 'Cersei Lannister',
-      close: cerseaClose,
-      open: false,
-      id: 9
-    },
-    {
-      name: 'Joffrey Baratheon',
-      close: jofryClose,
-      open: false,
-      id: 13
-    },
-    {
-      name: 'Jamie Lannister',
-      close: jaimeClose,
-      open: false,
-      id: 8
-    },
-    {
-      name: 'Tyrion Lannister',
-      close: tyrionClose,
-      open: tyrionOpen,
-      id: 14
-    },
-    {
-      name: 'Ned Stark',
-      close: nedClose,
-      open: false,
-      id: 6
-    },
-    {
-      name: 'Arya Stark',
-      close: aryaClose,
-      open: aryaOpen,
-      id: 3
-    },
-    {
-      name: 'Catelyn  Stark',
-      close: katClose,
-      open: false,
-      id: 10
-    },
-  ]
+  const [isLoading, setIsLoading] = useState(true)
+
   return (
     <main>
       <div className={'container-got smooth-border'}>
