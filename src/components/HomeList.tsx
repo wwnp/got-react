@@ -64,7 +64,7 @@ export const HomeList = ({ itemsS }: any) => {
                   initial="hidden"
                   animate="visible"
                   custom={index}
-                  transition={{ delay: .75 }}
+                  transition={{ delay: .85 }}
                 >
                   <h2>{item.name}</h2>
                 </motion.div>
