@@ -9,16 +9,20 @@ import { RootState } from 'store';
 import { useNavigate } from 'react-router-dom'
 import { HomeList } from 'components/HomeList'
 import snowClose from '../assets/images/snowClose.png'
+import snowOpen from '../assets/images/snowOpen.png'
 import daeClose from '../assets/images/daeClose.png'
 import robClose from '../assets/images/robClose.png'
 import sansaClose from '../assets/images/sansaClose.png'
+import sansaOpen from '../assets/images/sansaOpen.png'
 import oberinClose from '../assets/images/oberinClose.png'
 import cerseaClose from '../assets/images/cerseaClose.png'
 import jofryClose from '../assets/images/jofryClose.png'
 import jaimeClose from '../assets/images/jaimeClose.png'
-import tirionClose from '../assets/images/tirionClose.png'
+import tyrionClose from '../assets/images/tyrionClose.png'
+import tyrionOpen from '../assets/images/tyrionOpen.png'
 import nedClose from '../assets/images/nedClose.png'
 import aryaClose from '../assets/images/aryaClose.png'
+import aryaOpen from '../assets/images/aryaOpen.png'
 import katClose from '../assets/images/katClose.png'
 
 export const Home = (props: any) => {
@@ -26,74 +30,74 @@ export const Home = (props: any) => {
     {
       name: 'John Snow',
       close: snowClose,
-      open: false,
-      id: 1
+      open: snowOpen,
+      id: 2
     },
     {
       name: 'Daenerys Targaryen',
       close: daeClose,
       open: false,
-      id: 2
+      id: 0
     },
     {
       name: 'Rob Stark',
       close: robClose,
       open: false,
-      id: 0
+      id: 11
     },
     {
       name: 'Sansa Stark',
       close: sansaClose,
-      open: false,
-      id: 1
+      open: sansaOpen,
+      id: 4
     },
     {
-      name: 'Oberin Martell',
+      name: 'Oberyn Martell',
       close: oberinClose,
       open: false,
-      id: 2
+      id: 39
     },
     {
-      name: 'Sersea Lannister',
+      name: 'Cersei Lannister',
       close: cerseaClose,
       open: false,
-      id: 0
+      id: 9
     },
     {
-      name: 'Joffry Baratheon',
+      name: 'Joffrey Baratheon',
       close: jofryClose,
       open: false,
-      id: 1
+      id: 13
     },
     {
-      name: 'Jaime Lannister',
+      name: 'Jamie Lannister',
       close: jaimeClose,
       open: false,
-      id: 2
+      id: 8
     },
     {
       name: 'Tyrion Lannister',
-      close: tirionClose,
-      open: false,
-      id: 0
+      close: tyrionClose,
+      open: tyrionOpen,
+      id: 14
     },
     {
       name: 'Ned Stark',
       close: nedClose,
       open: false,
-      id: 1
+      id: 6
     },
     {
       name: 'Arya Stark',
       close: aryaClose,
-      open: false,
-      id: 2
+      open: aryaOpen,
+      id: 3
     },
     {
-      name: 'Katelyn Stark',
+      name: 'Catelyn  Stark',
       close: katClose,
       open: false,
-      id: 0
+      id: 10
     },
   ]
   return (
