@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/got-react/static/css/main.719c6313.css",
-    "main.js": "/got-react/static/js/main.2685c1e5.js",
+    "main.css": "/got-react/static/css/main.70136577.css",
+    "main.js": "/got-react/static/js/main.5b28d1bb.js",
     "static/media/tar.png": "/got-react/static/media/tar.eb22f60623e7e56f4f52.png",
     "static/media/gotLast.jpg": "/got-react/static/media/gotLast.b49d1a3d80a0cc8930d1.jpg",
     "static/media/tyrionOpen.png": "/got-react/static/media/tyrionOpen.df50a8795c97e50ca15b.png",
@@ -21,11 +21,11 @@
     "static/media/jofryClose.png": "/got-react/static/media/jofryClose.e54f8c489a210d403b3a.png",
     "static/media/sansaClose.png": "/got-react/static/media/sansaClose.90d95d23351abf509f7a.png",
     "index.html": "/got-react/index.html",
-    "main.719c6313.css.map": "/got-react/static/css/main.719c6313.css.map",
-    "main.2685c1e5.js.map": "/got-react/static/js/main.2685c1e5.js.map"
+    "main.70136577.css.map": "/got-react/static/css/main.70136577.css.map",
+    "main.5b28d1bb.js.map": "/got-react/static/js/main.5b28d1bb.js.map"
   },
   "entrypoints": [
-    "static/css/main.719c6313.css",
-    "static/js/main.2685c1e5.js"
+    "static/css/main.70136577.css",
+    "static/js/main.5b28d1bb.js"
   ]
 }
